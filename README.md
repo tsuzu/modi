@@ -2,7 +2,9 @@
 Initialize go.mod automatically
 
 ## Installation
-go install github.com/tsuzu/modi@latest
+```
+$ go install github.com/tsuzu/modi@latest
+```
 
 ## Usage
 Enter the directory to put go.mod in and run modi
