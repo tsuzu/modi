@@ -62,7 +62,13 @@ func main() {
 		panic(err)
 	}
 
-	cmd := exec.Command("go", "mod", "init", url)
+	goCommand := os.Getenv("MODI_GO_COMMAND")
+
+	if goCommand == "" {
+		goCommand = "go"
+	}
+
+	cmd := exec.Command(goCommand, "mod", "init", url)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
